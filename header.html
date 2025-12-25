@@ -1,0 +1,42 @@
+<!-- Global header component (shared across all pages) -->
+<header class="header">
+
+  <!-- Left side: brand logo and name -->
+  <div class="header-left">
+    <img src="images/heart.png" alt="OneDate" class="logo-img">
+    <span class="logo-text">OneDate</span>
+  </div>
+
+  <!-- Main navigation menu -->
+  <nav class="nav-menu" id="nav-menu">
+    <a href="index.html">Home</a>
+    <a href="booking.html">Booking</a>
+    <a href="contact.html">Contact</a>
+
+    <!-- Dynamic link:
+         - Shows "Sign Up" when user is logged out
+         - Changes to "My Account" when user is logged in
+         (Handled in header.js) -->
+    <a id="nav-account" href="signup.html">Sign Up</a>
+  </nav>
+
+  <!-- Right side: authentication button + mobile menu toggle -->
+  <div class="header-right">
+
+    <!-- Dynamic auth button:
+         - "Sign In" when logged out
+         - "Sign Out" when logged in -->
+    <a id="auth-btn" class="header-pill-btn" href="login.html">Sign In</a>
+
+    <!-- Mobile navigation toggle (hamburger icon) -->
+    <button
+      class="menu-toggle"
+      id="menu-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+    >
+      ☰
+    </button>
+  </div>
+
+</header>
