@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Character encoding -->
+  <meta charset="UTF-8" />
+
+  <!-- Responsive behavior for mobile and desktop -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title shown in browser tab -->
+  <title>Contact Us - OneDate</title>
+
+  <!-- Bootstrap CSS for grid, layout utilities and base components -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Bootstrap Icons library -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Google Font: Poppins for headings and UI text -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Global application styles -->
+  <link rel="stylesheet" href="global.css" />
+</head>
+
+<body class="bg-light">
+  <!-- Header placeholder – content injected dynamically via header.js -->
+  <div id="header-placeholder"></div>
+
+  <!-- Header script (loaded with defer to avoid blocking rendering) -->
+  <script src="header.js" defer></script>
+
+  <!-- Main page wrapper -->
+  <main class="page">
+    <section class="container">
+
+      <!-- Main layout row: text content + contact form -->
+      <div class="row align-items-center justify-content-center">
+
+        <!-- Left column: contact information and description -->
+        <div class="col-lg-5 animate-up">
+
+          <!-- Page heading -->
+          <h1 class="page-title">
+            Get in <span class="gradient-text">Touch</span>
+          </h1>
+
+          <!-- Supporting description -->
+          <p class="page-lead">
+            Have a question about our elite companions or need assistance with a booking?
+            Our concierge team is here to help.
+          </p>
+
+          <!-- Contact information list -->
+          <div class="info-list">
+
+            <!-- Email contact item -->
+            <div class="info-item">
+              <div class="icon-chip" aria-hidden="true">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div>
+                <small class="text-muted d-block">Email Support</small>
+                <span class="fw-bold">support@onedate.com</span>
+              </div>
+            </div>
+
+            <!-- WhatsApp contact item -->
+            <div class="info-item">
+              <div class="icon-chip icon-chip--success" aria-hidden="true">
+                <i class="bi bi-whatsapp"></i>
+              </div>
+              <div>
+                <small class="text-muted d-block">WhatsApp Contact</small>
+                <span class="fw-bold">+972 50-123-4567</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right column: contact form -->
+        <div class="col-lg-7 col-xl-6 ms-auto">
+
+          <!-- Card-style surface container -->
+          <div class="surface surface--pad-lg">
+
+            <!-- Contact form -->
+            <form id="contactForm">
+
+              <!-- Form fields grid -->
+              <div class="row g-3">
+
+                <!-- Full name input -->
+                <div class="col-md-6">
+                  <label class="form-label">Full Name *</label>
+                  <input
+                    type="text"
+                    class="form-field"
+                    placeholder="Your Name"
+                    required
+                  />
+                </div>
+
+                <!-- Email input -->
+                <div class="col-md-6">
+                  <label class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    class="form-field"
+                    placeholder="name@example.com"
+                    required
+                  />
+                </div>
+
+                <!-- Subject input -->
+                <div class="col-12">
+                  <label class="form-label">Subject *</label>
+                  <input
+                    type="text"
+                    class="form-field"
+                    placeholder="What is this about?"
+                    required
+                  />
+                </div>
+
+                <!-- Message textarea -->
+                <div class="col-12">
+                  <label class="form-label">Your Message *
+                  </label>
+                  <textarea
+                    class="form-field form-field--textarea"
+                    rows="4"
+                    placeholder="How can we assist you today?"
+                    required
+                  ></textarea>
+                </div>
+
+                <!-- Submit button -->
+                <div class="col-12">
+                  <button type="submit" class="btn-brand w-100">
+                    <span>Send Message</span>
+                    <i class="bi bi-send-fill ms-2" aria-hidden="true"></i>
+                  </button>
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer placeholder – injected dynamically via footer.js -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Footer script -->
+  <script src="footer.js"></script>
+
+  <!-- Bootstrap JavaScript bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
