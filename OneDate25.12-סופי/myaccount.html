@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>OneDate - My Account</title>
+
+  <!-- Bootstrap kept mainly for grid/layout and tables -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="global.css">
+</head>
+
+<body>
+  <!-- Shared header injected by header.js -->
+  <div id="header-placeholder"></div>
+  <script src="header.js" defer></script>
+
+  <!-- Global page wrapper for consistent spacing -->
+  <main class="page">
+    <section class="container section">
+
+      <!-- NOT SIGNED IN STATE -->
+      <div id="not-logged-in" class="d-none text-center mt-5">
+        <!-- Global card component -->
+        <div class="surface surface--pad-lg mx-auto" style="max-width: 520px;">
+          <div class="mb-3" style="font-size: 2.2rem;">🔒</div>
+          <h2 class="fw-bold mb-2">You’re not signed in</h2>
+          <p class="text-muted mb-4">Please sign in to view your account and bookings.</p>
+
+          <!-- Reuse header button style -->
+          <a href="login.html" class="header-pill-btn mx-auto text-decoration-none" style="display: inline-block;">
+            Sign In
+          </a>
+        </div>
+      </div>
+
+      <!-- LOGGED IN STATE -->
+      <div id="account-content" class="d-none">
+        <div class="row g-4">
+
+          <!-- LEFT: PROFILE CARD -->
+          <div class="col-lg-4">
+            <div class="surface surface--pad-lg text-center">
+
+              <div class="mb-3">
+                <!-- Avatar container kept inline (no global avatar component exists) -->
+                <div class="mx-auto rounded-circle d-flex align-items-center justify-content-center shadow-sm"
+                     style="width: 100px; height: 100px; background-color: #f4f0ff;">
+                  <span style="font-size: 2.5rem;">👤</span>
+                </div>
+              </div>
+
+              <h2 class="fw-bold h4 gradient-text mb-1" id="display-name">Guest User</h2>
+              <p class="text-muted small mb-4">Member Since 2025</p>
+
+              <div class="text-start border-top pt-3">
+                <div class="mb-2">
+                  <label class="fw-bold small text-muted">Email</label>
+                  <p class="mb-0 text-break" id="display-email">Not provided</p>
+                </div>
+                <div class="mb-2">
+                  <label class="fw-bold small text-muted">Phone</label>
+                  <p class="mb-0" id="display-phone">Not provided</p>
+                </div>
+                <div class="mb-0">
+                  <label class="fw-bold small text-muted">City</label>
+                  <p class="mb-0" id="display-city">Not provided</p>
+                </div>
+              </div>
+
+              <!-- Note: this button uses the header style, but is filled via inline color -->
+              <button class="header-pill-btn mt-4 w-100 border-0"
+                      style="background-color: #7A5CFF; color: white; cursor: pointer;"
+                      onclick="logout()">
+                Sign Out
+              </button>
+
+            </div>
+          </div>
+
+          <!-- RIGHT: BOOKINGS -->
+          <div class="col-lg-8">
+
+            <!-- ACTIVE BOOKING -->
+            <div class="surface surface--pad-lg mb-4">
+              <h3 class="fw-bold h5 mb-3">Active Booking</h3>
+
+              <!-- Dashed box kept inline (no global component exists for this pattern) -->
+              <div id="booking-status-area" class="p-4 rounded-4 text-center"
+                   style="background-color: #f8f9fb; border: 2px dashed #7A5CFF;">
+                <p class="mb-3">You don't have any active bookings right now.</p>
+
+                <!-- Primary CTA uses global button -->
+                <button class="btn-brand px-5" onclick="window.location.href='booking.html'">
+                  Find Your Companion →
+                </button>
+              </div>
+            </div>
+
+            <!-- PAST BOOKINGS -->
+            <div class="surface surface--pad-lg">
+              <h3 class="fw-bold h5 mb-3">Past Bookings History</h3>
+
+              <!-- Bootstrap table is fine here -->
+              <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                  <thead>
+                    <tr class="text-muted small">
+                      <th>Event</th>
+                      <th>Location</th>
+                      <th>Companion</th>
+                      <th>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody id="past-bookings-list"></tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Shared footer injected by footer.js -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+  <!-- Page logic -->
+  <script src="main.js"></script>
+</body>
+</html>
