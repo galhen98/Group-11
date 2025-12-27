@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneDate</title>
+
+  <!-- Bootstrap kept mainly for grid/layout utilities -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Keep fonts aligned with global.css (Inter + Poppins) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Global site styles -->
+  <link rel="stylesheet" href="global.css" />
+</head>
+
+<body>
+  <!-- Shared header injected by header.js -->
+  <div id="header-placeholder"></div>
+  <script src="header.js" defer></script>
+
+  <!-- HERO (already uses global hero styles from global.css) -->
+  <section class="hero-gradient-bg">
+    <div class="floating-bubble bubble-1"></div>
+    <div class="floating-bubble bubble-2"></div>
+
+    <!-- NOTE: inline z-index kept because it's a one-off layering requirement -->
+    <div class="container position-relative" style="z-index: 5;">
+      <div class="row align-items-center">
+
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="hero-title mb-4 animate-up">
+            Never Attend an Event <br>
+            <span class="text-white opacity-75">Alone Again</span> <br>
+          </h1>
+
+          <p class="hero-subtitle mb-5 animate-up">
+            Find the perfect companion for any occasion- weddings, dinners, family gathering or business events. Your ideal plus-one is just a click away.
+          </p>
+
+          <div class="animate-up">
+            <!-- Keep hero button as-is (already defined in global.css: .btn-hero-white) -->
+            <a href="booking.html" id="hero-booking-link" class="btn btn-hero-white rounded-pill">
+   Book Your Elite Plus-One <i class="bi bi-arrow-right ms-2" aria-hidden="true"></i>
+</a>
+          </div>
+
+          <div class="mt-5 d-flex align-items-center gap-3 animate-up justify-content-center justify-content-lg-start">
+            <div class="avatar-group d-flex">
+              <img src="https://i.pravatar.cc/100?u=a" alt="User">
+              <img src="https://i.pravatar.cc/100?u=b" alt="User">
+              <img src="https://i.pravatar.cc/100?u=c" alt="User">
+            </div>
+            <p class="mb-0 small fw-medium text-white">Join 500+ successful connections globally.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-5 d-none d-lg-block animate-up">
+          <img src="images/heart-cloud.png" class="img-fluid floating-img" alt="OneDate Experience">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT: use global page/section spacing for consistency with other pages -->
+  <main class="page">
+    <section class="container section">
+      <div class="row g-5">
+
+        <!-- LEFT COLUMN: Leadership -->
+        <div class="col-lg-5">
+          <!-- Use the same heading style concept as other pages -->
+          <h2 class="page-title">Our <span class="gradient-text">Leadership</span></h2>
+          <p class="page-lead mb-4">The experts behind your social success.</p>
+
+          <!-- Replace Bootstrap card with global surface card for consistent UI -->
+          <div class="team-card-horizontal surface surface--pad-lg mb-4">
+            <div class="d-flex align-items-center gap-4">
+              <!-- Keeping inline object-fit because it applies to this specific image -->
+              <img src="images/noa.PNG" class="rounded-circle shadow-sm" width="100" height="100" style="object-fit: cover;" alt="Noa Astrogano">
+              <div>
+                <h5 class="fw-bold mb-1">Noa Astrogano</h5>
+                <p class="text-primary small mb-0 fw-bold">Founder & CEO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card-horizontal surface surface--pad-lg mb-4">
+            <div class="d-flex align-items-center gap-4">
+              <img src="images/gal1.jpg" class="rounded-circle shadow-sm" width="100" height="100" style="object-fit: cover;" alt="Gal Henig">
+              <div>
+                <h5 class="fw-bold mb-1">Gal Henig</h5>
+                <p class="text-primary small mb-0 fw-bold">Founder & COO</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card-horizontal surface surface--pad-lg mb-4">
+            <div class="d-flex align-items-center gap-4">
+              <img src="images/shakedi_profile.JPEG" class="rounded-circle shadow-sm" width="100" height="100" style="object-fit: cover;" alt="Shaked Zack">
+              <div>
+                <h5 class="fw-bold mb-1">Shaked Zack</h5>
+                <p class="text-primary small mb-0 fw-bold">Founder & CTO</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Member Experiences -->
+        <div class="col-lg-7">
+          <h2 class="page-title">Member <span class="gradient-text">Experiences</span></h2>
+          <p class="page-lead mb-4">Trusted by professionals worldwide.</p>
+
+          <!-- Replace Bootstrap cards with global surface cards -->
+          <div class="review-card-white surface surface--pad-lg mb-4">
+            <div class="text-warning mb-3" aria-label="5 stars rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-dark fst-italic mb-4">"I needed a discrete plus-one for a gala. Truly professional."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/women/44.jpg" class="rounded-circle" width="40" alt="Sarah Levi">
+              <span class="fw-bold small">Sarah Levi</span>
+            </div>
+          </div>
+
+          <div class="review-card-white surface surface--pad-lg">
+            <div class="text-warning mb-3" aria-label="5 stars rating">
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text-dark fst-italic mb-4">"Excellent service for business dinners. Right presence by your side."</p>
+            <div class="d-flex align-items-center gap-3">
+              <img src="https://randomuser.me/api/portraits/men/32.jpg" class="rounded-circle" width="40" alt="David Cohen">
+              <span class="fw-bold small">David Cohen</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Shared footer injected by footer.js -->
+  <div id="footer-placeholder"></div>
+  <script src="footer.js"></script>
+
+  <!-- Bootstrap JS (optional; keep if header uses collapse/dropdown behavior) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Site logic -->
+  <script src="main.js"></script>
+</body>
+</html>
